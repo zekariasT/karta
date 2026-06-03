@@ -34,13 +34,13 @@ Stack detection looks at `dependencies` + `devDependencies` for `@nestjs/core` a
 The quickest way — no global install needed:
 
 ```bash
-claude mcp add karta -- npx -y karta
+claude mcp add karta -- npx -y karta-mcp
 ```
 
 Or install globally first if you prefer:
 
 ```bash
-npm install -g karta
+npm install -g karta-mcp
 claude mcp add karta -- karta
 ```
 
@@ -51,8 +51,8 @@ Then in a Claude Code session, run `/mcp` to confirm `karta` is listed with its 
 Karta also ships with a local web viewer that renders the architecture graph as an interactive 3D force-directed graph (powered by [`3d-force-graph`](https://github.com/vasturiano/3d-force-graph)).
 
 ```bash
-npx karta-viewer --project /path/to/your/project
-# or, if installed globally:
+# with global install:
+npm install -g karta-mcp
 karta-viewer --project /path/to/your/project --port 3737
 ```
 
