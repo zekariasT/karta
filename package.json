@@ -4,8 +4,8 @@
   "description": "MCP server that gives Claude Code stack-aware codebase exploration tools for NestJS, Next.js, and plain TypeScript projects.",
   "type": "module",
   "bin": {
-    "karta": "./dist/index.js",
-    "karta-viewer": "./dist/viewer/cli.js"
+    "karta": "dist/index.js",
+    "karta-viewer": "dist/viewer/cli.js"
   },
   "main": "./dist/index.js",
   "files": [
