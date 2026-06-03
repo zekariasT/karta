@@ -29,31 +29,29 @@ The goal: a handful of cheap tool calls give Claude Code a mental model of a pro
 
 Stack detection looks at `dependencies` + `devDependencies` for `@nestjs/core` and `next`.
 
-## Install
+## Install & Register with Claude Code
+
+The quickest way — no global install needed:
 
 ```bash
-git clone <this repo>
-cd Karta
-npm install
-npm run build
+claude mcp add karta -- npx -y karta
 ```
 
-`dist/index.js` is the executable entry point.
-
-## Register with Claude Code
+Or install globally first if you prefer:
 
 ```bash
-claude mcp add karta -- node /home/zac/Documents/profile/Karta/dist/index.js
+npm install -g karta
+claude mcp add karta -- karta
 ```
 
-Then in a Claude Code session, `/mcp` should list `karta` and its five tools. All tools take `projectPath` (absolute path to the target project) as their first argument.
+Then in a Claude Code session, run `/mcp` to confirm `karta` is listed with its five tools. All tools take `projectPath` (absolute path to the target project) as their first argument.
 
 ## Interactive 3D viewer
 
 Karta also ships with a local web viewer that renders the architecture graph as an interactive 3D force-directed graph (powered by [`3d-force-graph`](https://github.com/vasturiano/3d-force-graph)).
 
 ```bash
-npm run viewer -- --project /path/to/your/project
+npx karta-viewer --project /path/to/your/project
 # or, if installed globally:
 karta-viewer --project /path/to/your/project --port 3737
 ```
