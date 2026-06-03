@@ -1,6 +1,8 @@
 # Karta(ካርታ)
 
-A local MCP server that gives Claude Code stack-aware reconnaissance tools for an unfamiliar codebase. Karta runs over stdio, exposes five focused tools, and picks a different "architecture graph" strategy depending on whether the target project is **NestJS**, **Next.js**, or **plain Node/TypeScript**.
+![Karta viewer — interactive 3D architecture graph](docs/karta-demo.gif)
+
+A local MCP server that gives Claude Code stack-aware exploration tools for an unfamiliar codebase. Karta runs over stdio, exposes five focused tools, and picks a different "architecture graph" strategy depending on whether the target project is **NestJS**, **Next.js**, or **plain Node/TypeScript**.
 
 The goal: a handful of cheap tool calls give Claude Code a mental model of a project — its stack, its module layout, where symbols live — without dumping whole files into context.
 
